@@ -7,5 +7,8 @@ public class Test {
 
         animal = new Dog("Haku");
         animal.cry();
+
+        animal = new Bird();
+        animal.cry();
     }
 }
