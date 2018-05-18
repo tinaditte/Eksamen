@@ -1,4 +1,4 @@
-package Abstraction;
+package OOP.Abstraction.Abstraction;
 
 public class Dog extends Animal {
 
