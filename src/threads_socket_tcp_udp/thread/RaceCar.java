@@ -1,16 +1,16 @@
 package threads_socket_tcp_udp.thread;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 public class RaceCar implements Runnable {
     private String name = "";
     private int ditance = 0;
     private Random random = new Random();
-    ArrayList<RaceCar> place = new ArrayList<>();
+    static ArrayList<RaceCar> place = new ArrayList<>();
 
     public RaceCar(String name){
+
         this.name = name;
     }
 
@@ -25,12 +25,18 @@ public class RaceCar implements Runnable {
             }catch (InterruptedException e){
                 e.printStackTrace();
             }
-            System.out.println(name + " " + ditance);
 
         }if (ditance == 1000){
-            for (int i = 1; i <= 9; i++){
-                place.add(RaceCar.this);
+            synchronized (RaceCar.class){
+                System.out.print(this.name);
+                place.add(this);
+                System.out.println(" added to list");
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return this.name;
     }
 }

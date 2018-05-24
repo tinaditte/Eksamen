@@ -21,7 +21,8 @@ public class TCPServer {
             System.exit(1);
         }do{
             handleClient();
-        }while (true);
+        }//uendelig lykke
+        while (true);
     }
 
     private static void handleClient(){

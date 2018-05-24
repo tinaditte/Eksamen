@@ -1,10 +1,9 @@
 package threads_socket_tcp_udp.thread;
 
-import java.util.Random;
-
 public class Racing{
 
     public static void main(String[] args) {
+
         Racing aRace = new Racing();
     }
 
@@ -23,6 +22,14 @@ public class Racing{
         laubching("Purple Car");
         laubching("Orange Car");
         laubching("Violet Car");
-    }
 
+        while (true){
+            synchronized (RaceCar.class){
+                if (RaceCar.place.size() == 8){
+                    break;
+                }
+            }
+        }
+        System.out.println(RaceCar.place);
+    }
 }

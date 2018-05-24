@@ -1,13 +1,10 @@
 package threads_socket_tcp_udp.Socket_threads;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
-import java.rmi.UnknownHostException;
 import java.util.Scanner;
 
 public class Client {

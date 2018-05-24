@@ -28,11 +28,14 @@ public class TCPClient {
         try {
             link = new Socket(host, PORT);
             Scanner input = new Scanner(link.getInputStream());
+            //sende ud, autoflush: committer kun når man har fået user entry
             PrintWriter output = new PrintWriter(link.getOutputStream(),true);
 
             Scanner userEntry = new Scanner(System.in);
             String msg;
             String resp;
+
+            //do/while kører altid én gang.
 
             do {
                 System.out.println("Enter your message: ");
@@ -44,9 +47,11 @@ public class TCPClient {
             }
             while (!msg.equals("EXIT"));
         } catch (IOException ex){
+            //fejlliste, gennemgang af hvor fejlen var
             ex.printStackTrace();
         }
 
+        //kører når try/catch delen er færdig, uanset hvordan den afsluttes
         finally {
             try {
                 System.out.println("Terminates connection...");
