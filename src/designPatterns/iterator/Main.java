@@ -1,6 +1,4 @@
-package designPatterns.iterator;/*
-Created by Karo on 16-May-18.
-*/
+package designPatterns.iterator;
 
 public class Main {
     public static void main(String[] args) {

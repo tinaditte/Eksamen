@@ -1,6 +1,4 @@
-package designPatterns.observer;/*
-Created by Karo on 16-May-18.
-*/
+package designPatterns.observer;
 
 public interface StringObserver {
 

@@ -1,28 +1,26 @@
 package threads_socket_tcp_udp.thread;
 
-import java.util.Random;
-
 public class Racing{
 
     public static void main(String[] args) {
         Racing aRace = new Racing();
     }
 
-    public void laubching(String name){
+    public void launching(String name){
         RaceCar rc = new RaceCar(name);
         Thread rcThread = new Thread(rc);
         rcThread.start();
     }
 
     public Racing(){
-        laubching("Blue Car");
-        laubching("Red Car");
-        laubching("Green Car");
-        laubching("Yellow Car");
-        laubching("Pink Car");
-        laubching("Purple Car");
-        laubching("Orange Car");
-        laubching("Violet Car");
+        launching("Blue Car");
+        launching("Red Car");
+        launching("Green Car");
+        launching("Yellow Car");
+        launching("Pink Car");
+        launching("Purple Car");
+        launching("Orange Car");
+        launching("Violet Car");
     }
 
 }

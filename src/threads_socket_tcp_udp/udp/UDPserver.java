@@ -17,6 +17,7 @@ public class UDPserver {
         //To simulate packets loss
         Random random = new Random();
 
+
         System.out.println("Setting up Datagram Socket port");
         DatagramSocket socket = null;
         try {
@@ -25,6 +26,7 @@ public class UDPserver {
             e.printStackTrace();
             System.out.println("New Datagram Socket port failed");
         }
+
 
         while (true){
             DatagramPacket request = new DatagramPacket(new byte[1024], 1024);
